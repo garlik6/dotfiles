@@ -37,13 +37,39 @@
 #keystate_capslock = enable
 #keystate_scrolllock= enable
 
-# Examples of commands:
-"amixer set Master 5%+"
+"amixer set Master 5%+ && pkill -RTMIN+22 dwmblocks"
         XF86AudioRaiseVolume
-"amixer set Master 5%-"
+
+"amixer set Master 5%- && pkill -RTMIN+22 dwmblocks"
         XF86AudioLowerVolume
-"amixer set Master toggle"
+
+"amixer set Master toggle && pkill -RTMIN+22 dwmblocks"
         XF86AudioMute
+
+"xbacklight -inc 10 ; pkill -RTMIN+23 dwmblocks"
+	XF86MonBrightnessUp
+
+"xbacklight -dec 10 ; pkill -RTMIN+23 dwmblocks"
+	XF86MonBrightnessDown
+
+"xbacklight -inc 1; pkill -RTMIN+23 dwmblocks"
+	Shift + Mod1 + XF86MonBrightnessUp
+
+"sct 3400; echo 3400 > /tmp/sct_file.tmp; pkill -RTMIN+23 dwmblocks;"
+	Shift + XF86MonBrightnessDown
+
+"sct 6500; echo 6500 > /tmp/sct_file.tmp; pkill -RTMIN+23 dwmblocks"
+	Shift + XF86MonBrightnessUp
+
+
+"pkill -RTMIN+20 dwmblocks"
+	Mod4 + space
+
+"flameshot gui"
+	Mod4 + Shift + s	
+	
+
+
 #"xterm -geom 50x20+20+20"
 #   Shift+Mod2+alt + s
 #
