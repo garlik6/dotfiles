@@ -25,14 +25,11 @@
 #   Release, Control, Shift, Mod1 (Alt), Mod2 (NumLock),
 #   Mod3 (CapsLock), Mod4, Mod5 (Scroll).
 #
-
 # The release modifier is not a standard X modifier, but you can
 # use it if you want to catch release events instead of press events
-
 # By defaults, xbindkeys does not pay attention with the modifiers
 # NumLock, CapsLock and ScrollLock.
 # Uncomment the lines above if you want to pay attention to them.
-
 #keystate_numlock = enable
 #keystate_capslock = enable
 #keystate_scrolllock= enable
@@ -43,31 +40,33 @@
 "amixer set Master 5%- && pkill -RTMIN+22 dwmblocks"
         XF86AudioLowerVolume
 
-"amixer set Master toggle && pkill -RTMIN+22 dwmblocks"
+"volume-mute-helper && pkill -rtmin+22 dwmblocks"
         XF86AudioMute
 
-"xbacklight -inc 10 ; pkill -RTMIN+23 dwmblocks"
+"xbacklight -inc 10; sleep 1; pkill -RTMIN+23 dwmblocks"
 	XF86MonBrightnessUp
 
-"xbacklight -dec 10 ; pkill -RTMIN+23 dwmblocks"
+"xbacklight -dec 10; sleep 1; pkill -RTMIN+23 dwmblocks"
 	XF86MonBrightnessDown
 
 "xbacklight -inc 1; pkill -RTMIN+23 dwmblocks"
 	Shift + Mod1 + XF86MonBrightnessUp
 
-"sct 3400; echo 3400 > /tmp/sct_file.tmp; pkill -RTMIN+23 dwmblocks;"
+"sct 3400; pkill -RTMIN+23 dwmblocks; echo 3400 > /tmp/sct_file.tmp"
 	Shift + XF86MonBrightnessDown
 
-"sct 6500; echo 6500 > /tmp/sct_file.tmp; pkill -RTMIN+23 dwmblocks"
+"sct 6500; pkill -RTMIN+23 dwmblocks; echo 6500 > /tmp/sct_file.tmp"
 	Shift + XF86MonBrightnessUp
-
 
 "pkill -RTMIN+20 dwmblocks"
 	Mod4 + space
 
 "flameshot gui"
 	Mod4 + Shift + s	
-	
+"telegram-desktop"
+	Mod4 + Shift + t
+"pavucontrol"
+	Mod4 + Shift + m
 
 
 #"xterm -geom 50x20+20+20"
