@@ -43,19 +43,19 @@
 "volume-mute-helper && pkill -rtmin+22 dwmblocks"
         XF86AudioMute
 
-"xbacklight -inc 10; sleep 1; pkill -RTMIN+23 dwmblocks"
+"xbacklight -inc 10; pkill -RTMIN+23 dwmblocks"
 	XF86MonBrightnessUp
 
-"xbacklight -dec 10; sleep 1; pkill -RTMIN+23 dwmblocks"
+"xbacklight -dec 10; pkill -RTMIN+23 dwmblocks"
 	XF86MonBrightnessDown
 
 "xbacklight -inc 1; pkill -RTMIN+23 dwmblocks"
 	Shift + Mod1 + XF86MonBrightnessUp
 
-"sct 3400; pkill -RTMIN+23 dwmblocks; echo 3400 > /tmp/sct_file.tmp"
+"set-bg -d ; sct 3400 ; pkill -RTMIN+23 dwmblocks; echo 3400 > /tmp/sct_file.tmp"
 	Shift + XF86MonBrightnessDown
 
-"sct 6500; pkill -RTMIN+23 dwmblocks; echo 6500 > /tmp/sct_file.tmp"
+"set-bg -l ; sct 6500 ; pkill -RTMIN+23 dwmblocks; echo 6500 > /tmp/sct_file.tmp"
 	Shift + XF86MonBrightnessUp
 
 "pkill -RTMIN+20 dwmblocks"
